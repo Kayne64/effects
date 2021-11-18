@@ -8,20 +8,20 @@ With this script you experience different effects depending on the type of drugs
 3. Enjoy
 
 # Keybind/Commands
-Start/Reset LSD = /lsd and /resetlsd
-Start/Reset Weed = /weed and /resetweed
-Start/Reset Cocaine = /cocaine and /resetcocaine
-Start/Reset Meth = /meth and /methreset
-Start/Reset Drinking = /drunk and /resetdrunk
+1. Start/Reset LSD = /lsd and /resetlsd
+2. Start/Reset Weed = /weed and /resetweed
+3. Start/Reset Cocaine = /cocaine and /resetcocaine
+4. Start/Reset Meth = /meth and /methreset
+5. Start/Reset Drinking = /drunk and /resetdrunk
 
 # Features
 Certain Commands for Starting and Resetting
 Individual Commands
 
 # Plans
-Intergration into vMenu/Menus
-Emotes when command/button has been executed
-Different Effects with Drugs
+1.Intergration into vMenu/Menus
+2. Emotes when command/button has been executed
+3. Different Effects with Drugs
 
 # Credits/Permission
 
