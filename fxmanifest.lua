@@ -6,5 +6,10 @@ description 'Effects with a Command'
 version '1.0.0'
 
 client_scripts {
-    'cl.lua'
+    'effects/cocaine.lua',
+    'effects/weed.lua',
+    'effects/lsd.lua',
+    'effects/meth.lua',
+    'effects/drunk.lua',
+    'misc.lua'
 }
