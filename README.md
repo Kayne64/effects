@@ -14,6 +14,15 @@ Start/Reset Cocaine = /cocaine and /resetcocaine
 Start/Reset Meth = /meth and /methreset
 Start/Reset Drinking = /drunk and /resetdrunk
 
+# Features
+Certain Commands for Starting and Resetting
+Individual Commands
+
+# Plans
+Intergration into vMenu/Menus
+Emotes when command/button has been executed
+Different Effects with Drugs
+
 # Credits/Permission
 
 You must not in any circumstance share or claim this script.
