@@ -17,14 +17,12 @@ RegisterCommand("drunk", function(source, args)
     AnimpostfxPlay ("DrugsMichaelAliensFight", 10000001, true)
     SetPedIsDrunk(player, true)
     SetPedMovementClipset(player, "MOVE_M@DRUNK@VERYDRUNK", true)
-    SetRunSprintMultiplierForPlayer(player, 1.20)
     ShakeGameplayCam("DRUNK_SHAKE", 1.0)
 
     --Waiting
     Citizen.Wait(100000)
 
     --Resets back to Normal
-    IsPlayerDead(GetPlayerPed(-1), true) then 
         SetPedIsDrunk(GetPlayerPed(-1), false)		
          SetPedMotionBlur(playerPed, false)
         ResetPedMovementClipset(GetPlayerPed(-1))
@@ -33,9 +31,80 @@ RegisterCommand("drunk", function(source, args)
 end)
 
 RegisterCommand("weed", function(source, args)
+    alert("~g~You just smoked some weed")
+    TaskStartScenarioInPlace(player, "WORLD_HUMAN_SMOKING_POT", 0, 1)
+    SetPedMotionBlur(player, true)
+    AnimpostfxPlay("DrugsMichaelAliensFight",10000001, true)
+    SetPedIsDrunk(player, true)
+    SetPedMovementClipset(player, "MOVE_M@DRUNK", true)
+    ShakeGameplayCam("DRUNK_SHAKE", 1.0
 
+    --- Waiting
+Citizen.Wait(100000)
+    -- Resets Back to Normal
+    SetPedIsDrunk(GetPlayerPed(-1), false)		
+    SetPedMotionBlur(playerPed, false)
+   ResetPedMovementClipset(GetPlayerPed(-1))
+   AnimpostfxStopAll()
+    ShakeGameplayCam("DRUNK_SHAKE", 0.0)
 end)
 
+RegisterCommand("lsd", function(source, args)
+        alert("~g~You just took some LSD")
+        TaskStartScenarioInPlace(player, "WORLD_HUMAN_DRUG_DEALER", 0, 1)
+        SetPedMotionBlur(player, true)
+        AnimpostfxPlay("DrugsMichaelAliensFight",10000001, true)
+        SetPedIsDrunk(player, true)
+        SetPedMovementClipset(player, "MOVE_M@DRUNK", true)
+        ShakeGameplayCam("DRUNK_SHAKE", 1.0
+    
+        --- Waiting
+    Citizen.Wait(100000)
+        -- Resets Back to Normal
+        SetPedIsDrunk(GetPlayerPed(-1), false)		
+        SetPedMotionBlur(playerPed, false)
+       ResetPedMovementClipset(GetPlayerPed(-1))
+       AnimpostfxStopAll()
+        ShakeGameplayCam("DRUNK_SHAKE", 0.0)    
+end)
+
+RegisterCommand("cocaine", function(source, args)
+    alert("~g~You just took some Cocaine")
+    TaskStartScenarioInPlace(player, "WORLD_HUMAN_DRUG_DEALER", 0, 1)
+    SetPedMotionBlur(player, true)
+    AnimpostfxPlay("DrugsMichaelAliensFight",10000001, true)
+    SetPedIsDrunk(player, true)
+    SetPedMovementClipset(player, "MOVE_M@DRUNK", true)
+    ShakeGameplayCam("DRUNK_SHAKE", 1.0
+
+    --- Waiting
+Citizen.Wait(100000)
+    -- Resets Back to Normal
+    SetPedIsDrunk(GetPlayerPed(-1), false)		
+    SetPedMotionBlur(playerPed, false)
+   ResetPedMovementClipset(GetPlayerPed(-1))
+   AnimpostfxStopAll()
+    ShakeGameplayCam("DRUNK_SHAKE", 0.0)    
+end)
+
+RegisterCommand("meth", function(source, args)
+    alert("~g~You just took some meth")
+    TaskStartScenarioInPlace(player, "WORLD_HUMAN_DRUG_DEALER", 0, 1)
+    SetPedMotionBlur(player, true)
+    AnimpostfxPlay("DrugsMichaelAliensFight",10000001, true)
+    SetPedIsDrunk(player, true)
+    SetPedMovementClipset(player, "MOVE_M@DRUNK", true)
+    ShakeGameplayCam("DRUNK_SHAKE", 1.0
+
+    --- Waiting
+Citizen.Wait(100000)
+    -- Resets Back to Normal
+    SetPedIsDrunk(GetPlayerPed(-1), false)		
+    SetPedMotionBlur(playerPed, false)
+   ResetPedMovementClipset(GetPlayerPed(-1))
+   AnimpostfxStopAll()
+    ShakeGameplayCam("DRUNK_SHAKE", 0.0)    
+end)
 
 -- If player is dead, Reset all.
 IsPlayerDead(GetPlayerPed(-1), true) then 
