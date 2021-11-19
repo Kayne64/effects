@@ -1,15 +1,8 @@
 fx_version 'cerulean'
-games { 'gta5' }
+games 'gta5'
 
 author 'Kayne64'
-description 'Effects with a Command'
+description 'Effects'
 version '1.0.0'
 
-client_scripts {
-    'effects/cocaine.lua',
-    'effects/weed.lua',
-    'effects/lsd.lua',
-    'effects/meth.lua',
-    'effects/drunk.lua',
-    'misc.lua'
-}
+client_script 'cl.lua'
