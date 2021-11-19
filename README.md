@@ -19,7 +19,7 @@ Certain Commands for Starting and Resetting
 Individual Commands
 
 # Plans
-1.Intergration into vMenu/Menus
+1. Intergration into vMenu/Menus
 2. Emotes when command/button has been executed
 3. Different Effects with Drugs
 
