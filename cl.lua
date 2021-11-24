@@ -25,7 +25,7 @@ while not HasAnimSetLoaded("MOVE_M@DRUNK@MODERATEDRUNK") do
 end
 
 RequestAnimSet("MOVE_M@DRUNK@VERYDRUNK")
-while not HasAnimSetLoaded("MOVE_M@DRUNk@VERYDRUNK") do 
+while not HasAnimSetLoaded("MOVE_M@DRUNK@VERYDRUNK") do 
     Wait(0)
 end 
 
@@ -35,7 +35,7 @@ while not HasAnimSetLoaded("MOVE_M@DRUNK@SLIGHTLYDRUNK") do
 end
 
 RequestAnimSet("MOVE_M@DRUNK@MODERATEDRUNK_HEAD_UP")
-while not HasAnimSetLoaded("MOVE_M@DRUNK@MODERATEDRUNK_HEAD_UP") do
+while not HasAnimSetLoaded( "MOVE_M@DRUNK@MODERATEDRUNK_HEAD_UP") do
     Wait(0)
 end
 
@@ -85,10 +85,10 @@ end)
 RegisterCommand("cocaine", function(source, args)
     alert("~r~You just injected some Cocaine")
     SetPedMotionBlur(player, true)
-    AnimpostfxPlay("DrugTrevorClownsFight")
+    AnimpostfxPlay("DrugsTrevorClownsFight")
     SetPedIsDrunk(player, true)
     SetPedMovementClipset(player, "MOVE_M@DRUNK@VERYDRUNK", 1.0)
-    ShakeGameplayCam("FAMILY5_DRUG_TRIP_SHAKE", 10.0)
+    ShakeGameplayCam("ROAD_VIBRATION_SHAKE", 10.0)
 end)
 
 RegisterCommand("resetcocaine", function(source, args)
@@ -108,7 +108,7 @@ RegisterCommand("meth", function(source, args)
     AnimpostfxPlay("DrugsMichaelAliensFight")
     SetPedIsDrunk(player, true)
     SetPedMovementClipset(player, "MOVE_M@DRUNK@SLIGHTLYDRUNK", 1.5)
-    ShakeGameplayCam("FAMILY5_DRUG_TRIP_SHAKE", 10.0)
+    ShakeGameplayCam("ROAD_VIBRATION_SHAKE", 10.0)
 end)
 
 RegisterCommand("resetmeth", function(source, args)
@@ -118,6 +118,7 @@ RegisterCommand("resetmeth", function(source, args)
     ResetPedMovementClipset(player, 5.0)
     SetPedIsDrunk(player, false)
     RemoveAnimSet("MOVE_M@DRUNK@MODERATEDRUNK_HEAD_UP")
+    StopGameplayCamShaking()
 end)
 
 -- Drunk Command 
