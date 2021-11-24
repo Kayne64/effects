@@ -7,7 +7,7 @@ function alert(msg)
     SetTextComponentFormat("STRING")
     AddTextComponentString(msg)
     DisplayHelpTextFromStringLabel(0, 0, 1, -1)
-end 
+end
 
 function notify(msg)
     SetDescription("STRING")
@@ -16,29 +16,38 @@ function notify(msg)
 end
 
 -- If player is dead//died, Reset all Effects
-IsPedDeadOrDying(player, true)
-SetPedIsDrunk(player, false)
-SetPedMotionBlur(player, false)
-ResetPedMovementClipset(player)
-AnimpostfxStopAll()
-ShakeGameplayCam(player, 0)
-end)
 
---Requesting Animation Set
+
+--Requesting Animation Sets
 RequestAnimSet("MOVE_M@DRUNK@MODERATEDRUNK")
 while not HasAnimSetLoaded("MOVE_M@DRUNK@MODERATEDRUNK") do
     Wait(0)
 end
 
--- LSD Command
+RequestAnimSet("MOVE_M@DRUNK@VERYDRUNK")
+while not HasAnimSetLoaded("MOVE_M@DRUNk@VERYDRUNK") do 
+    Wait(0)
+end 
+
+RequestAnimSet("MOVE_M@DRUNK@SLIGHTLYDRUNK")
+while not HasAnimSetLoaded("MOVE_M@DRUNK@SLIGHTLYDRUNK") do
+    Wait(0)
+end
+
+RequestAnimSet("MOVE_M@DRUNK@MODERATEDRUNK_HEAD_UP")
+while not HasAnimSetLoaded("MOVE_M@DRUNK@MODERATEDRUNK_HEAD_UP") do
+    Wait(0)
+end
+
+
+    -- LSD Command
 RegisterCommand("lsd", function(source, args)
     alert("~g~You just took some LSD")
-    TaskStartScenarioInPlace(player, "WORLD_HUMAN_DRUG_DEALER", 0, 1)
     SetPedMotionBlur(player, true)
-    AnimpostfxPlay("DrugsMichaelAliensFight", 1000001, true)
+    AnimpostfxPlay("DrugsTrevorClownsFightIn", 1000001, true)
     SetPedIsDrunk(player, true)
     SetPedMovementClipset(player,"MOVE_M@DRUNK@MODERATEDRUNK", 1.0)
-    ShakeGameplayCam("VIBRATE_SHAKE", 1.5)
+    ShakeGameplayCam("VIBRATE_SHAKE", 10)
 end)
 
 RegisterCommand("resetlsd", function(source, args)
@@ -53,6 +62,8 @@ RegisterCommand("resetlsd", function(source, args)
 end)
 
 -- Weed Command
+
+
 
 -- Cocaine Command
 
