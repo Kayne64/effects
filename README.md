@@ -1,4 +1,4 @@
-# Effects - Version 1.0.1
+# Effects - Version 1.0.2
 With this script you experience different effects depending on the type of drugs that you have taken.
 
 # Instructions
