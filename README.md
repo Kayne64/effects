@@ -22,7 +22,8 @@ With this script you experience different effects depending on the type of drugs
 # Plans
 1. Intergration into vMenu/Menus
 2. Emotes when command/button has been executed
-3. 
+
+
 # Credits/Permission
 
 You must not in any circumstance share or claim this script.
