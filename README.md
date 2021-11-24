@@ -15,14 +15,14 @@ With this script you experience different effects depending on the type of drugs
 5. Start/Reset Drinking = /drunk and /resetdrunk
 
 # Features
-Certain Commands for Starting and Resetting
-Individual Commands
+1. Individual Commands
+2. Certain Walking Styles for different substances 
+3. Certain Effects for different substances
 
 # Plans
 1. Intergration into vMenu/Menus
 2. Emotes when command/button has been executed
-3. Different Effects with Drugs
-
+3. 
 # Credits/Permission
 
 You must not in any circumstance share or claim this script.
