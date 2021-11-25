@@ -15,8 +15,6 @@ function notify(msg)
     DrawNotification(true, false)
 end
 
--- If player is dead//died, Reset all Effects
-
 
 --Requesting Animation Sets
 RequestAnimSet("MOVE_M@DRUNK@MODERATEDRUNK")
@@ -33,12 +31,6 @@ RequestAnimSet("MOVE_M@DRUNK@SLIGHTLYDRUNK")
 while not HasAnimSetLoaded("MOVE_M@DRUNK@SLIGHTLYDRUNK") do
     Wait(0)
 end
-
-RequestAnimSet("MOVE_M@DRUNK@MODERATEDRUNK_HEAD_UP")
-while not HasAnimSetLoaded( "MOVE_M@DRUNK@MODERATEDRUNK_HEAD_UP") do
-    Wait(0)
-end
-
 
     -- LSD Command
 RegisterCommand("lsd", function(source, args)
@@ -117,7 +109,7 @@ RegisterCommand("resetmeth", function(source, args)
     AnimpostfxStopAll()
     ResetPedMovementClipset(player, 5.0)
     SetPedIsDrunk(player, false)
-    RemoveAnimSet("MOVE_M@DRUNK@MODERATEDRUNK_HEAD_UP")
+    RemoveAnimSet("MOVE_M@DRUNK@SLIGHTLYDRUNK")
     StopGameplayCamShaking()
 end)
 
@@ -138,5 +130,35 @@ RegisterCommand("resetdrunk", function(source, args)
     ResetPedMovementClipset(player, 5.0)
     SetPedIsDrunk(player, false)
     RemoveAnimSet("MOVE_M@DRUNK@VERYDRUNK")
+    StopGameplayCamShaking()
+end)
+
+--Command Suggestions--
+
+Citizen.CreateThread(function()
+    TriggerEvent('chat:addSuggestion', '/lsd', 'Starts an LSD Effect')
+    TriggerEvent('chat:addSuggestion', '/resetlsd', 'Resets your LSD Effect')
+    TriggerEvent('chat:addSuggestion', '/weed', 'Starts a Weed Effect')
+    TriggerEvent('chat:addSuggestion', '/resetweed', 'Resets your Weed Effect')
+    TriggerEvent('chat:addSuggestion', '/cocaine', 'Starts an Cocaine Effect')
+    TriggerEvent('chat:addSuggestion', '/resetcocaine', 'Resets your Cocaine Effect')
+    TriggerEvent('chat:addSuggestion', '/meth', 'Starts a Meth Effect ')
+    TriggerEvent('chat:addSuggestion', '/resetmeth', 'Resets your meth effect')
+    TriggerEvent('chat:addSuggestion', '/drunk', 'Starts a Drunk Effect')
+    TriggerEvent('chat:addSuggestion', '/resetdrunk', 'Resets your Drunk Effect')
+end)
+
+
+--Once dead, all effects reset--
+if IsPlayerDead(player) = true then
+    SetPedMotionBlur(player, false)
+    AnimpostfxStopAll()
+    ResetPedMovementClipset(player,5.0)
+    SetPedIsDrunk(player, false)
+    RemoveAnimSet("MOVE_M@DRUNK@VERYDRUNK")
+    RemoveAnimSet("MOVE_M@DRUNK@SLIGHTLYDRUNK")
+    RemoveAnimSet("MOVE_M@DRUNK@VERYDRUNK")
+    RemoveAnimSet("MOVE_M@DRUNK@MODERATEDRUNK")
+    StopGameplayCamShaking()
 end)
 
