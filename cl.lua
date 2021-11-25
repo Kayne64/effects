@@ -19,17 +19,17 @@ end
 --Requesting Animation Sets
 RequestAnimSet("MOVE_M@DRUNK@MODERATEDRUNK")
 while not HasAnimSetLoaded("MOVE_M@DRUNK@MODERATEDRUNK") do
-    Wait(0)
+    Citizen.Wait(0)
 end
 
 RequestAnimSet("MOVE_M@DRUNK@VERYDRUNK")
 while not HasAnimSetLoaded("MOVE_M@DRUNK@VERYDRUNK") do 
-    Wait(0)
+    Citizen.Wait(0)
 end 
 
 RequestAnimSet("MOVE_M@DRUNK@SLIGHTLYDRUNK")
 while not HasAnimSetLoaded("MOVE_M@DRUNK@SLIGHTLYDRUNK") do
-    Wait(0)
+    Citizen.Wait(0)
 end
 
     -- LSD Command
@@ -49,7 +49,7 @@ RegisterCommand("resetlsd", function(source, args)
     AnimpostfxStopAll()
     SetPedIsDrunk(player, false)
     ResetPedMovementClipset(player, 5.0)
-    RemoveAnimSet("MOVE_M@DRUNK@MODERATEDRUNK")
+    RemoveAnimSet("MOVE_M@DRUNK@MODERATEDRUNK", 1.0)
     StopGameplayCamShaking()
 end)
 
@@ -89,7 +89,7 @@ RegisterCommand("resetcocaine", function(source, args)
     AnimpostfxStopAll()
     ResetPedMovementClipset(player, 5.0)
     SetPedIsDrunk(player, false)
-    RemoveAnimSet("MOVE_M@DRUNK@VERYDRUNK")
+    RemoveAnimSet("MOVE_M@DRUNK@VERYDRUNK", 1.0)
     StopGameplayCamShaking()
 end)
 
@@ -109,7 +109,7 @@ RegisterCommand("resetmeth", function(source, args)
     AnimpostfxStopAll()
     ResetPedMovementClipset(player, 5.0)
     SetPedIsDrunk(player, false)
-    RemoveAnimSet("MOVE_M@DRUNK@SLIGHTLYDRUNK")
+    RemoveAnimSet("MOVE_M@DRUNK@SLIGHTLYDRUNK", 1.0)
     StopGameplayCamShaking()
 end)
 
@@ -150,7 +150,7 @@ end)
 
 
 --Once dead, all effects reset--
-if IsPlayerDead(player) = true then
+if GetPlayerHealth == 1000 then 
     SetPedMotionBlur(player, false)
     AnimpostfxStopAll()
     ResetPedMovementClipset(player,5.0)
@@ -160,5 +160,5 @@ if IsPlayerDead(player) = true then
     RemoveAnimSet("MOVE_M@DRUNK@VERYDRUNK")
     RemoveAnimSet("MOVE_M@DRUNK@MODERATEDRUNK")
     StopGameplayCamShaking()
-end)
+end
 
