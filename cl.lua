@@ -1,4 +1,4 @@
-a--Variables
+--Variables
 local player = PlayerPedId()
 local player = GetPlayerPed(-1)
 
@@ -17,16 +17,16 @@ end
 
 
 --Requesting Animation Sets
-RequestAnimSet("MOVE_M@DRUNK@MODERATEDRUNK")
-while not HasAnimSetLoaded("MOVE_M@DRUNK@MODERATEDRUNK") 
+RequestAnimSet("MOVE_M@DRUNK@MODERATEDRUNK") 
+while not HasAnimSetLoaded("MOVE_M@DRUNK@MODERATEDRUNK") do 
 end
 
 RequestAnimSet("MOVE_M@DRUNK@VERYDRUNK")
-while not HasAnimSetLoaded("MOVE_M@DRUNK@VERYDRUNK")
+while not HasAnimSetLoaded("MOVE_M@DRUNK@VERYDRUNK") do 
 end 
 
 RequestAnimSet("MOVE_M@DRUNK@SLIGHTLYDRUNK")
-while not HasAnimSetLoaded("MOVE_M@DRUNK@SLIGHTLYDRUNK") 
+while not HasAnimSetLoaded("MOVE_M@DRUNK@SLIGHTLYDRUNK") do
 end
 
     -- LSD Command
