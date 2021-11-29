@@ -1,4 +1,4 @@
-# Effects - Version 1.0.2
+# Effects - Version 1.0.3
 With this script you experience different effects depending on the type of drugs that you have taken.
 
 # Instructions
@@ -7,22 +7,15 @@ With this script you experience different effects depending on the type of drugs
 2. Ensure "start effects" into your server.cfg
 3. Enjoy
 
-# Keybind/Commands
-1. Start/Reset LSD = /lsd and /resetlsd
-2. Start/Reset Weed = /weed and /resetweed
-3. Start/Reset Cocaine = /cocaine and /resetcocaine
-4. Start/Reset Meth = /meth and /methreset
-5. Start/Reset Drinking = /drunk and /resetdrunk
+# Usage
+/effect [effectname] [start/stop] 
+[effectname] can be lsd, cocaine, weed, drunk, meth
 
 # Features
-1. Individual Commands
+1. Single command
 2. Certain Walking Styles for different substances 
 3. Certain Effects for different substances
-
-# Plans
-1. Intergration into vMenu/Menus
-2. Emotes when command/button has been executed
-
+4. Emotes
 
 # Credits/Permission
 
