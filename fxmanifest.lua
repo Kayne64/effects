@@ -3,8 +3,9 @@ games { 'gta5' }
 
 author 'Kayne64'
 description 'Effects'
-version '1.0.0'
+version '1.0.3'
 
 client_scripts {
-    'cl.lua'
+    'cl.lua',
+    'emotes.lua'
 } 
