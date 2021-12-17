@@ -6,6 +6,5 @@ description 'Effects'
 version '1.0.3'
 
 client_scripts {
-    'cl.lua',
-    'emotes.lua'
+    'cl.lua'
 } 
